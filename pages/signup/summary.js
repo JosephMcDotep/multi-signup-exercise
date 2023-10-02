@@ -31,7 +31,12 @@ const Summary = () => {
   return (
     <div className={styles.content}>
       <span className={styles.summary__success}>
-        <Image src={Media.IconCheckGreen} width={22} height={22} />
+        <Image
+          src={Media.IconCheckGreen}
+          width={22}
+          height={22}
+          alt={t("stepsCompletedText")}
+        />
         {t("stepsCompletedText")}
       </span>
       <Header text={t("registrationSuccessTitle")} />
