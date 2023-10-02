@@ -1,0 +1,122 @@
+.content {
+  border: 1px solid var(--app-light);
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 8px var(--app-light);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.input__wrapper {
+  display: flex;
+  gap: 26px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.summary__success {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  gap: 10px;
+}
+
+.summary__details {
+  display: flex;
+  gap: 26px;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.summary__values {
+  font-weight: 600;
+}
+
+.label__container {
+  min-width: 165px;
+}
+
+.button__done {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--app-red);
+  color: var(--app-white);
+  border: 1px solid var(--app-red);
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
+}
+
+.button__done:hover {
+  background-color: var(--app-red-hover);
+}
+
+.button__done:active {
+  background-color: var(--app-red-active);
+}
+
+.check__wrapper {
+  display: flex;
+}
+
+.terms {
+  font-size: 12px;
+  max-width: 240px;
+  height: 155px;
+  overflow-y: scroll;
+  background-color: var(--app-scroll-def);
+  padding: 0 14px;
+  margin: 10px 0;
+  scrollbar-width: thin;
+}
+
+.terms::-webkit-scrollbar {
+  height: 12px;
+  width: 4px;
+  background: var(--app-scroll-def);
+}
+
+.terms::-webkit-scrollbar-thumb {
+  background: var(--app-scroll-thumb);
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.terms::-webkit-scrollbar-corner {
+  background: var(--app-light);
+}
+
+@media only screen and (max-width: 430px) {
+  .input__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 10px 0;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .check__wrapper {
+    justify-content: center;
+  }
+}

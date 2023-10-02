@@ -1,0 +1,12 @@
+.step__label {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 12px;
+}
+
+.subtext {
+  font-size: 14px;
+  text-align: left;
+  justify-content: flex-start;
+}

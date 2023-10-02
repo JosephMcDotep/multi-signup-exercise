@@ -1,0 +1,11 @@
+:root {
+  --app-red: #ed0c06;
+  --app-red-hover: #fb120a;
+  --app-red-disabled: #e77c78;
+  --app-red-active: #ff0800;
+  --app-blue: #18249c;
+  --app-white: #ffffff;
+  --app-light: #cccccc;
+  --app-scroll-def: #f1f1f1;
+  --app-scroll-thumb: #bebebe;
+}

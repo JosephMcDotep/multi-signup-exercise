@@ -1,0 +1,57 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--app-red);
+  color: var(--app-white);
+  border: 1px solid var(--app-red);
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--app-red-hover);
+}
+
+.button:active {
+  background-color: var(--app-red-active);
+}
+
+.button:disabled {
+  background-color: var(--app-red-disabled);
+  cursor: default;
+}
+
+.buttonReversed {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--app-white);
+  color: var(--app-red);
+  border: 1px solid var(--app-red);
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonReversed:hover {
+  background-color: var(--app-red-hover);
+  color: var(--app-white);
+}
+
+.buttonReversed:active {
+  background-color: var(--app-red-active);
+}
+
+.buttonReversed:disabled {
+  background-color: var(--app-red-disabled);
+  cursor: default;
+}

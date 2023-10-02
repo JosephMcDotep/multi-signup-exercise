@@ -1,0 +1,24 @@
+{
+  "name": "multi-signup-exercise",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "i18next": "^23.5.1",
+    "next": "latest",
+    "next-i18next": "^14.0.3",
+    "prop-types": "^15.8.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-i18next": "^13.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "prettier": "^2.5.1"
+  }
+}
