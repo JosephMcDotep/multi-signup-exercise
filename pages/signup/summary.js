@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -15,12 +15,25 @@ const Summary = () => {
   const { t } = useTranslation("");
   const router = useRouter();
   const { formData, setFormData, setRegStep } = useContext(FormDetailsContext);
+  const [selectedState, setSelectedState] = useState("");
 
   useEffect(() => {
     if (isEmpty(formData)) {
       router.push("/");
     }
   }, []);
+
+  useEffect(() => {
+    const states = t("states", { returnObjects: true });
+
+    if (!isEmpty(formData?.state)) {
+      const sState = states?.find((s) => s.value === formData?.state);
+
+      if (!isEmpty(sState)) {
+        setSelectedState(sState?.text);
+      }
+    }
+  }, [formData]);
 
   const handleStartOver = () => {
     router.push("/");
@@ -67,6 +80,14 @@ const Summary = () => {
             </span>
           </div>
         </div>
+        {selectedState && (
+          <div className={styles.summary__details}>
+            <div>
+              {t("stateLabel")}
+              <span className={styles.summary__values}>{selectedState}</span>
+            </div>
+          </div>
+        )}
         <div className={styles.summary__details}>
           <div>
             {t("AgreeTermsLabel")}

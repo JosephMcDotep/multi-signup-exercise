@@ -7,6 +7,7 @@ import { FormDetailsContext } from "@/context/formDetails";
 import Header from "@/components/common/header";
 import Navigation from "@/components/common/navigation";
 import InputField from "@/components/common/inputField";
+import SelectField from "@/components/common/selectField";
 import isEmpty from "@/utils/isEmpty";
 
 import styles from "../../styles/Signup.module.css";
@@ -19,6 +20,7 @@ const StepTwo = () => {
 
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [state, setState] = useState("");
 
   useEffect(() => {
     if (isEmpty(formData.firstName) || isEmpty(formData.lastName)) {
@@ -45,6 +47,10 @@ const StepTwo = () => {
     if (!isEmpty(formData?.phoneNumber)) {
       setPhoneNumber(formData?.phoneNumber);
     }
+
+    if (!isEmpty(formData?.state)) {
+      setState(formData?.state);
+    }
   }, [formData]);
 
   const handleButtonClick = () => {
@@ -52,6 +58,7 @@ const StepTwo = () => {
       ...formData,
       email,
       phoneNumber,
+      state,
     });
 
     setRegStep((prevState) => prevState + 1);
@@ -62,6 +69,11 @@ const StepTwo = () => {
   const handleClickBack = () => {
     setRegStep((prevState) => prevState - 1);
     router.push("/");
+  };
+
+  const handleSelectState = (e) => {
+    e.preventDefault();
+    setState(e?.currentTarget?.value);
   };
 
   return (
@@ -96,6 +108,17 @@ const StepTwo = () => {
               onChange={(e) => {
                 setPhoneNumber(e?.currentTarget?.value);
               }}
+            />
+          </div>
+          <div className={styles.input__wrapper}>
+            <div className={styles.label__container}>
+              <label htmlFor="state">{t("stateLabel")}</label>
+            </div>
+            <SelectField
+              name="state"
+              options={t("states", { returnObjects: true })}
+              onSelect={handleSelectState}
+              defaultVal={state}
             />
           </div>
           <Navigation

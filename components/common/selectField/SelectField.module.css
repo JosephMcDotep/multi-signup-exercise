@@ -1,0 +1,12 @@
+.select__options {
+  min-width: 176px;
+  box-sizing: border-box;
+  border: 2px solid var(--app-light);
+  height: 25px;
+}
+
+@media only screen and (max-width: 430px) {
+  .select__options {
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 .button__text {
   box-sizing: border-box;
-  border: 2px solid #ccc;
+  border: 2px solid var(--app-light);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;

@@ -12,6 +12,33 @@
   "stepTwoText": "We need your contact information to keep you updated.",
   "emailLabel": "Email: ",
   "phoneNumberLabel": "Phone Number: ",
+  "stateLabel": "State: ",
+  "states": [
+    {
+      "value": "nsw",
+      "text": "NSW"
+    },
+    {
+      "value": "vic",
+      "text": "VIC"
+    },
+    {
+      "value": "qld",
+      "text": "QLD"
+    },
+    {
+      "value": "wa",
+      "text": "WA"
+    },
+    {
+      "value": "sa",
+      "text": "SA"
+    },
+    {
+      "value": "tas",
+      "text": "TAS"
+    }
+  ],
   "agreementAndPrefTitle": "Agreement and Preferences",
   "AgreeTermsLabel": "Terms and Agreements ",
   "receiveEmailPromosLabel": "Receive Email Promotions ",
